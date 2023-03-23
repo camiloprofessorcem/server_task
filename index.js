@@ -26,7 +26,7 @@ const Tarefa = model('Tarefa', TarefaSchema);
 const router = Router();
 
 router.get('/', (req,res) => {
-  res.json({"message":"olá do deploy"})
+  res.json({"message":"olá2 do deploy"})
 })
 // Listar todas as tarefas
 router.get('/tarefas', async (req, res) => {
