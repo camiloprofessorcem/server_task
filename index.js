@@ -4,10 +4,9 @@ import fs from 'fs'
 // Configurações iniciais
 const app = express();
 app.use(json());
-
 // Conexão com o banco de dados
 connect(
-    'mongodb://192.168.108.155:27017/?readPreference=primary&ssl=false&directConnection=true', {
+    'mongodb+srv://camiloprofessorcem:VLii6oh2sAKjlV72@cluster0.q57dlls.mongodb.net/?retryWrites=true&w=majority', {
 }).then(() => {
   console.log('Conectado ao banco de dados');
 }).catch((error) => {
