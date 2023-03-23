@@ -25,7 +25,7 @@ const Tarefa = model('Tarefa', TarefaSchema);
 // Rotas
 const router = Router();
 
-router.get('/', () => {
+router.get('/', (req,res) => {
   res.json({"message":"olá do deploy"})
 })
 // Listar todas as tarefas
