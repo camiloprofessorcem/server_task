@@ -6,8 +6,9 @@ const app = express();
 app.use(json());
 // Conexão com o banco de dados
 connect(
-    'mongodb+srv://camiloprofessorcem:VLii6oh2sAKjlV72@cluster0.q57dlls.mongodb.net/?retryWrites=true&w=majority', {
-}).then(() => {
+    'mongodb+srv://camiloprofessorcem:VLii6oh2sAKjlV72@cluster0.q57dlls.mongodb.net/?retryWrites=true&w=majority'
+  //'mongodb://172.23.116.91:27017/?readPreference=primary&ssl=false&directConnection=true'
+).then(() => {
   console.log('Conectado ao banco de dados');
 }).catch((error) => {
   console.error('Erro ao conectar ao banco de dados:', error);
@@ -26,7 +27,7 @@ const Tarefa = model('Tarefa', TarefaSchema);
 const router = Router();
 
 router.get('/', (req,res) => {
-  res.json({"message":"olá2 do deploy"})
+  res.json({"message":"olá pessoal do deploy automático"})
 })
 // Listar todas as tarefas
 router.get('/tarefas', async (req, res) => {
